@@ -11,6 +11,10 @@ Softmax 使用機率分布來選擇 arm，將高期望報酬的 arm 設定為較
 Thompson Sampling 是一種基於機率的探索方法。它會根據每個 arm 的後驗分布抽樣一個值，並選擇值最大的那個 arm。常見情況下，如果 reward 是伯努利分布，就用 Beta 分布來建模。<br>
 ![image](https://github.com/user-attachments/assets/781ff234-c4ff-4536-b779-a45d06ddb2b5)<br>
 
+**prompt**<br>
+請幫我用 Python 寫一個模擬程式，模擬四種 Multi-Armed Bandit 策略（Epsilon-Greedy、UCB、Softmax、Thompson Sampling）。Bandit 的每個 arm 使用固定的期望值（例如 [0.5, 0.55, 0.6, 0.65, 0.7]），模擬多輪（可設定 runs），每一輪步數可設定（steps），Softmax 的溫度參數 τ 也要可調整。請畫出累積報酬（cumulative reward）與累積遺憾（cumulative regret）圖，並加入隨機種子設定，讓每次結果可以重現。<br>
+
+
 
 
 
