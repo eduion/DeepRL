@@ -13,6 +13,16 @@ Thompson Sampling 是一種基於機率的探索方法。它會根據每個 arm 
 
 **prompt**<br>
 請幫我用 Python 寫一個模擬程式，模擬四種 Multi-Armed Bandit 策略（Epsilon-Greedy、UCB、Softmax、Thompson Sampling）。Bandit 的每個 arm 使用固定的期望值（例如 [0.5, 0.55, 0.6, 0.65, 0.7]），模擬多輪（可設定 runs），每一輪步數可設定（steps），Softmax 的溫度參數 τ 也要可調整。請畫出累積報酬（cumulative reward）與累積遺憾（cumulative regret）圖，並加入隨機種子設定，讓每次結果可以重現。<br>
+**結果解釋**
+Thompson Sampling:Reward：最高,Regret：最低<br>
+使用貝式機率建模成功率，透過抽樣自然達到探索與利用平衡。<br>
+在初期即可快速探索，且根據回報迅速集中在最好的 arm。<br>
+Softmax:Reward：第二高,Regret：適中偏低<br>
+根據估計值轉換成機率後進行抽樣，有效平衡探索與利用。<br>
+UCB (Upper Confidence Bound):Reward：第三名,Regret：中高<br>
+初期積極探索所有 arm，但後期收斂速度比 Thompson 慢。<br>
+Epsilon-Greedy:Reward：最差,Regret：最高 <br>
+使用固定機率𝜀=0.1隨機探索，其餘時間利用最大估值。<br>
 
 
 
